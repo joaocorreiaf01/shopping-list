@@ -1,7 +1,9 @@
+// Selecionando os elementos
 const input = document.getElementById("item")
-const form = document.querySelector("form")
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault()
-    console.log(input.value)
+// Input recebendo apenas letras, não números
+input.addEventListener("input",() => {
+    const regex = /\d+/g
+    input.value = input.value.replace(regex, "")
 })
+
