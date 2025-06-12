@@ -90,6 +90,7 @@ form {
     margin-top: 2.75rem;
     display: grid;
     gap: .75rem;
+    align-items: center;
 
     & .style-content {
         display: flex;
@@ -100,10 +101,11 @@ form {
         height: 3rem;
         border-radius: .75rem;
 
-        & img[src*="bin"] {
+        & a {
             margin-left: auto;
             padding-right: .53rem;
         }
+
     }
 
     & #input-content {
