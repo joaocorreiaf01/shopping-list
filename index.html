@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <span>
+            🡐 Voltar
+        </span>
+
+        <h2>Compras da semana</h2>
+
+        <form>
+            <input type="text" name="item" id="item" placeholder="Adicione um novo item" required />
+            <button type="submit" id="add">Adicionar item</button>
+
+            <div>
+                <input type="checkbox" id="PaodeForma" name="items" value="paodeforma">
+                <label for="PaodeForma" class="items">Pão de Forma</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="CafePreto" name="items" value="cafepreto">
+                <label for="CafePreto" class="items">Café preto</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="SucodeLaranja"  name="items" value="sucodelaranja">
+                <label for="SucodeLaranja" class="items">Suco de laranja</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="Bolacha" name="items" value="bolacha">
+                <label for="Bolacha" class="items">Bolacha</label>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <img src="assets/icons/alert.svg" alt="">
+        <span>O item foi removido da lista</span>
+        <img src="assets/icons/x.svg" alt="">
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
