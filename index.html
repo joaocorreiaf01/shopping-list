@@ -13,34 +13,42 @@
 </head>
 <body>
     <main>
-        <span>
+        <img src="assets/logo.svg" alt="">
+
+        <a href="#">
             🡐 Voltar
-        </span>
+        </a>
 
         <h2>Compras da semana</h2>
 
         <form>
-            <input type="text" name="item" id="item" placeholder="Adicione um novo item" required />
-            <button type="submit" id="add">Adicionar item</button>
+            <div id="input-content">
+                <input class="style-content" type="text" name="item" id="item" placeholder="Adicione um novo item" required />
+                <button type="submit" id="add">Adicionar item</button>
+            </div>
 
-            <div>
+            <div class="style-content">
                 <input type="checkbox" id="PaodeForma" name="items" value="paodeforma">
                 <label for="PaodeForma" class="items">Pão de Forma</label>
+                <img src="assets/icons/bin.svg" alt="">
             </div>
 
-            <div>
+            <div class="style-content">
                 <input type="checkbox" id="CafePreto" name="items" value="cafepreto">
                 <label for="CafePreto" class="items">Café preto</label>
+                <img src="assets/icons/bin.svg" alt="">
             </div>
 
-            <div>
+            <div class="style-content">
                 <input type="checkbox" id="SucodeLaranja"  name="items" value="sucodelaranja">
                 <label for="SucodeLaranja" class="items">Suco de laranja</label>
+                <img src="assets/icons/bin.svg" alt="">
             </div>
 
-            <div>
+            <div class="style-content">
                 <input type="checkbox" id="Bolacha" name="items" value="bolacha">
                 <label for="Bolacha" class="items">Bolacha</label>
+                <img src="assets/icons/bin.svg" alt="">
             </div>
 
         </form>
