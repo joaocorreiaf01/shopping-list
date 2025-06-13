@@ -21,39 +21,39 @@
 
         <h2>Compras da semana</h2>
 
-        <form>
+        <form id="itemscontainer">
             <div id="input-content">
-                <input class="style-content" type="text" name="item" id="item" placeholder="Adicione um novo item" required />
+                <input class="text-content" type="text" name="item" id="item" placeholder="Adicione um novo item" required />
                 <button type="submit" id="add">Adicionar item</button>
             </div>
 
             <div class="style-content">
-                <input type="checkbox" id="PaodeForma" name="items" value="paodeforma">
-                <label for="PaodeForma" class="items">Pão de Forma</label>
+                <input type="checkbox" id="paodeforma" name="items" value="paodeforma">
+                <label for="paodeForma" class="items">Pão de Forma</label>
                 <a href="#">
                     <img src="assets/icons/bin.svg" alt="">
                 </a>
             </div>
 
             <div class="style-content">
-                <input type="checkbox" id="CafePreto" name="items" value="cafepreto">
-                <label for="CafePreto" class="items">Café preto</label>
+                <input type="checkbox" id="cafepreto" name="items" value="cafepreto">
+                <label for="cafePreto" class="items">Café preto</label>
                 <a href="#">
                     <img src="assets/icons/bin.svg" alt="">
                 </a>
             </div>
 
             <div class="style-content">
-                <input type="checkbox" id="SucodeLaranja"  name="items" value="sucodelaranja">
-                <label for="SucodeLaranja" class="items">Suco de laranja</label>
+                <input type="checkbox" id="sucodelaranja"  name="items" value="sucodelaranja">
+                <label for="sucodeLaranja" class="items">Suco de laranja</label>
                 <a href="#">
                     <img src="assets/icons/bin.svg" alt="">
                 </a>
             </div>
 
             <div class="style-content">
-                <input type="checkbox" id="Bolacha" name="items" value="bolacha">
-                <label for="Bolacha" class="items">Bolacha</label>
+                <input type="checkbox" id="bolacha" name="items" value="bolacha">
+                <label for="bolacha" class="items">Bolacha</label>
                 <a href="#">
                     <img src="assets/icons/bin.svg" alt="">
                 </a>
@@ -65,7 +65,7 @@
     <footer>
         <img src="assets/icons/alert.svg" alt="">
         <span>O item foi removido da lista</span>
-        <img src="assets/icons/x.svg" alt="">
+        <img id="delete-footer" src="assets/icons/x.svg" alt="">
     </footer>
     <script src="scripts.js"></script>
 </body>

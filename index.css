@@ -85,6 +85,16 @@ form {
     gap: .75rem;
     align-items: center;
 
+    & .text-content {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        padding-left: .75rem;
+        background-color: var(--background-secondary);
+        height: 3rem;
+        border-radius: .75rem;
+    }
+
     & .style-content {
         display: flex;
         align-items: center;
