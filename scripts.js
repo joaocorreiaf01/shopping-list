@@ -2,7 +2,7 @@
 const input = document.getElementById("item")
 const form = document.querySelector("form")
 const footer = document.querySelector("footer")
-const imgsBinItems = document.querySelectorAll("a img")
+const imgBinItem = document.querySelector("a img")
 const imgBinClassFooter = document.querySelector("#delete-footer")
 
 // Input recebendo apenas letras, não números
@@ -52,25 +52,25 @@ function createElement (valueText) {
     a.setAttribute("href", "#")
 
     img.setAttribute("src", "assets/icons/bin.svg")
+    img.classList.add("delete-items")
 }
 
-// Chamando todas as imagens de bin selecionadas e percorrendo o evento em cada uma (pois o método remove não funciona em HTML Collections (coleção de elementos))
-// Callback function tendo img como parâmetro
-imgsBinItems.forEach(img => {
-    try {
-        img.addEventListener("click", (event) => {
-        event.preventDefault()
-        // Vai procurar a classe style-content subindo a partir de img e remover
-        img.closest(".style-content").remove()
 
-        // Vai adicionar a classe show-result, tornando o footer visível
-        footer.classList.add("show-result")
-        })
-    } catch {
-        alert ("Não foi possível excluir o item da lista. Tente novamente!")
+// Usando delegação de eventos
+// a propriedade target vai capturar onde foi o evento na hora do clique
+// o closest vai buscar a classe .delete-items acima
+// Se não encontrar, retorna null (false) e não ativa a condicional
+// (Isso faz com que o evento só aconteça de fato quando clicar onde tem a classe delete-items (na imagem da lixeira))
+
+form.addEventListener("click", (event) => {
+    const imgBinItems = event.target.closest(".delete-items")
+
+    if (imgBinItems) {
+        event.preventDefault()
+        const divDeleteItem = imgBinItems.closest(".style-content")
+        divDeleteItem.remove()
     }
 })
-
 
 // Evento de clique na imagem de deletar o footer e remoção da classe
 imgBinClassFooter.addEventListener("click", (event) => {
