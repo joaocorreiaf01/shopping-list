@@ -71,6 +71,7 @@ form.addEventListener("click", (event) => {
         event.preventDefault()
         const divDeleteItem = imgBinItems.closest(".style-content")
         divDeleteItem.remove()
+        footer.classList.add("show-result")
     }
 })
 
