@@ -1,4 +1,4 @@
-// Selecionando os elementos
+
 const input = document.getElementById("item")
 const form = document.querySelector("form")
 const footer = document.querySelector("footer")
@@ -65,13 +65,21 @@ function createElement () {
 // (Isso faz com que o evento só aconteça de fato quando clicar onde tem a classe delete-items (na imagem da lixeira))
 
 form.addEventListener("click", (event) => {
+
+    try {
     const imgBinItems = event.target.closest(".delete-items")
 
-    if (imgBinItems) {
-        event.preventDefault()
-        const divDeleteItem = imgBinItems.closest(".style-content")
-        divDeleteItem.remove()
-        footer.classList.add("show-result")
+        if (imgBinItems) {
+            event.preventDefault()
+            const divDeleteItem = imgBinItems.closest(".style-content")
+            
+            if(divDeleteItem) {
+                divDeleteItem.remove()
+                footer.classList.add("show-result")
+            }
+        }
+    } catch {
+        alert ("Não foi possível remover o elemento da lista. Tente novamente!")
     }
 })
 
