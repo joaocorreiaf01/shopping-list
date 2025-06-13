@@ -16,12 +16,14 @@ input.addEventListener("input",() => {
 form.addEventListener("submit", (event) => {
     event.preventDefault()
     value = input.value
-    createElement(value)
+
+    // Chamando a função para criar os items
+    createElement()
 })
 
 
 // Função para adicionar na lista o item digitado
-function createElement (valueText) {
+function createElement () {
 
     // Criação dos elementos
     const div = document.createElement("div")
